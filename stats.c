@@ -5,7 +5,7 @@ int emailAlertCallCount = 0;
 int ledAlertCallCount = 0;
 
 
-struct Stats compute_statistics(const float* numberset, int setlength) 
+struct Stats compute_statistics(const float *numberset, int setlength) 
 {
     Stats s;
     float total_sum = 0 ;
@@ -30,7 +30,7 @@ struct Stats compute_statistics(const float* numberset, int setlength)
             }
         }
    
-        s.average = total_sum/(float)setlength;
+        s.average = (float)total_sum/setlength;
         s.min = min_value;
         s.max = max_value;
     }
