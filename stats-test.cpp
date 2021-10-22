@@ -2,7 +2,7 @@
 
 #include "catch.hpp"
 #include "stats.h"
-
+#incude "alerts.h"
 #include <iostream>
 using namespace std;
 #include <stdlib.h>
