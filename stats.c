@@ -1,5 +1,4 @@
 #include "stats.h"
-#include "alerts.h"
 #include "stdio.h"
 #include <math.h>
 int emailAlertCallCount = 0;
@@ -31,7 +30,7 @@ struct Stats compute_statistics(const float* numberset, int setlength)
             }
         }
    
-        s.average = total_sum/setlength;
+        s.average = total_sum/(float)setlength;
         s.min = min_value;
         s.max = max_value;
     }
