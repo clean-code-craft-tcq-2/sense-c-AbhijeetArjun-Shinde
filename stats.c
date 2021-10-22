@@ -5,7 +5,8 @@ int emailAlertCallCount = 0;
 int ledAlertCallCount = 0;
 
 
-struct Stats compute_statistics(const float* numberset, int setlength) {
+struct Stats compute_statistics(const float* numberset, int setlength) 
+{
     struct Stats s;
     float total_sum = 0 ;
     float max_value = numberset[0];
@@ -42,5 +43,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     
     return s;
 }
+
+
 
 
