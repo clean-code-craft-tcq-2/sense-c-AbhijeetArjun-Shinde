@@ -60,7 +60,7 @@ void ledAlerter(float Threshold,struct StatscomputedStats)
 }
 
 
-void check_and_alert ( float maxThreshold,alerter_funcptr alerter[], struct Stats computedStats)
+void check_and_alert ( float maxThreshold,alerter_funcptr alerters[], struct Stats computedStats)
 {
     if(Stats.max > maxThreshold)
     {
