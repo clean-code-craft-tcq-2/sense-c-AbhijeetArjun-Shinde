@@ -23,7 +23,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
                 max_value = numberset[i];
             }
         
-            if(min_value > numberset[i])
+            if(min_value < numberset[i])
             {
                 min_value=numberset[i];
             }
