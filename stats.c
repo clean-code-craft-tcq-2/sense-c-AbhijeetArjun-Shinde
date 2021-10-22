@@ -13,6 +13,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     
     if(setlength != 0 )
     {
+        int i;
         for(i =0 ; i < setlength ; i++)
         {
             total_sum += numberset[i];
