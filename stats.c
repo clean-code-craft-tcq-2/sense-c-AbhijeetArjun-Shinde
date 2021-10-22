@@ -44,13 +44,28 @@ struct Stats compute_statistics(const float* numberset, int setlength)
     return s;
 }
 
+void emailAlerter(float Threshold,struct StatscomputedStats)
+{
+   if(computedStats.max > Threshold)
+   {
+       emailAlertCallCount=1;
+   }
+}
+void ledAlerter(float Threshold,struct StatscomputedStats)
+{
+   if(computedStats.max > Threshold)
+   {
+       ledAlertCallCount=1;
+   }
+}
 
-void check_and_alert ( float maxThreshold,alerter_funcptr alerters, Stats computedStats)
+
+void check_and_alert ( float maxThreshold,alerter_funcptr alerter[], struct Stats computedStats)
 {
     if(Stats.max > maxThreshold)
     {
-        alerters[0]();
-        alerters[1]();
+        alerters[0](maxThreshold,computedStats);
+        alerters[1](maxThreshold,computedStats);
     }
 }
 
